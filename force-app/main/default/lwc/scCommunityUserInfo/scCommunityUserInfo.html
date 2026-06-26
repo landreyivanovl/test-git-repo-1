@@ -1,0 +1,30 @@
+<template>
+    <section class="user-info">
+        <template lwc:if={isLoading}>
+            <div class="user-info__spinner">
+                <lightning-spinner 
+                    size={userInfoMetaData.spinner.size}
+                    variant={userInfoMetaData.spinner.variant}>
+                </lightning-spinner>
+            </div>
+        </template>
+        <template lwc:else>
+            <h3 class="user-info__title section-title slds-m-bottom_medium">{sectionTitle}</h3>
+            <p class="user-info__subtitle slds-m-bottom_medium">{sectionDescription}
+            </p>
+            <div class="user-info__card card">
+                <div class="user-info__logo">
+                    <img src={userData.imageUrl} alt={userInfoMetaData.logo.alt}>
+                </div>
+                <ul>
+                    <li class="slds-grid slds-grid_align-spread slds-p-vertical_medium card-field"><div>{userInfoMetaData.cardFields.firstName}</div><div>{userData.firstName}</div></li>
+                    <li class="slds-grid slds-grid_align-spread slds-p-vertical_medium card-field"><div>{userInfoMetaData.cardFields.lastName}</div><div>{userData.lastName}</div></li>
+                    <li class="slds-grid slds-grid_align-spread slds-p-vertical_medium card-field"><div>{userInfoMetaData.cardFields.mobile}</div><div>{userData.mobileNumber}</div></li>
+                    <li class="slds-grid slds-grid_align-spread slds-p-vertical_medium card-field"><div>{userInfoMetaData.cardFields.phone}</div><div>{userData.phoneNumber}</div></li>
+                    <li class="slds-grid slds-grid_align-spread slds-p-vertical_medium card-field"><div>{userInfoMetaData.cardFields.email}</div><div>{userData.email}</div></li>
+                    <li class="slds-grid slds-grid_align-spread slds-p-vertical_medium card-field"><div>{userInfoMetaData.cardFields.address}</div><div>{address}</div></li>
+                </ul>
+            </div>
+        </template>
+    </section>
+</template>

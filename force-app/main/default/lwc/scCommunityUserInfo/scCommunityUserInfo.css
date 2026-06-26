@@ -1,0 +1,32 @@
+@import 'c/scCommunityUtilCSS';
+
+
+.user-info{
+    width: 60%;
+    position: relative;
+}
+
+.user-info__logo img{
+    height: 8rem;
+    width: 8rem;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+.user-info__spinner{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.user-info__card li{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .user-info{
+        width: 100%;
+    }
+}

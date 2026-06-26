@@ -1,0 +1,14 @@
+<template>
+    <section class="new-opportunity">
+        <div class="new-opportunity__container">
+            <h3 class="section-title">
+               {sectionTitle}
+            </h3> 
+            <p class="new-opportunity__subtitle slds-m-bottom_medium">
+                {sectionDescription}
+            </p>
+            <c-sc-community-my-opportunities-tab-item opp-name={newOppMetaData.title}>
+            </c-sc-community-my-opportunities-tab-item>
+        </div>
+    </section>
+</template>
